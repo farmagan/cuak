@@ -1,0 +1,16 @@
+%body
+  #wrapper
+    %header#header.alt
+      %span.logo= image_tag "logo.svg"
+      / <h1>ClientChat</h1>
+      %p
+        Communicate with clients.
+        %br/
+      / built by Ferdi Armagan for <a href="armaganvideos.com">www.armaganvideos.com</a></p>
+    / Nav
+    %nav#nav
+      %ul
+        %li= link_to "Home", pages_index_path
+        %li= link_to "Dashboard", pages_dashboard_path
+        %li= link_to "Clients", pages_book_path
+        %li= link_to "Chat", pages_chat_path

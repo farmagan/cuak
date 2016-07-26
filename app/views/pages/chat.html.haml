@@ -1,0 +1,40 @@
+%body
+  #wrapper
+    / Main
+    #main
+      / Introduction
+      %section#intro.main
+        .spotlight
+          .content
+            %header.major
+              %h2 Clients like to chat.
+            %p You probably already met atleast one client who wrote an usual simple message spread out into multiple emails. First the description of their projects, then images, then .pdf's. Managing this mess is not your work, you got something better to do, thus we invented ClientChat.
+            %ul.actions
+              %li
+                %a.button{:href => "generic.html"} Learn More
+          %span.image= image_tag "pic01.jpg"
+      / Scripts
+      %script{:src => "assets/js/jquery.min.js"}
+      %script{:src => "assets/js/jquery.scrollex.min.js"}
+      %script{:src => "assets/js/jquery.scrolly.min.js"}
+      %script{:src => "assets/js/skel.min.js"}
+      %script{:src => "assets/js/util.js"}
+      /[if lte IE 8] <script src="assets/js/ie/respond.min.js"></script>
+      %script{:src => "assets/js/main.js"}
+    / Footer
+    #wrapper
+      %footer#footer
+        %section
+          %h2 Project Description
+          %p Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.
+        %section
+          %h2 Client Description
+          %dl.alt
+            %dt Name
+            %dd Tesla Motors • Elon Musk • ENG
+            %dt Budget
+            %dd 25.000€
+            %dt Email
+            %dd
+              %a{:href => "#"} information@untitled.tld
+        %p.copyright © Made with love in Bochum and Hannover.
