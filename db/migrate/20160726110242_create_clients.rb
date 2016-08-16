@@ -4,7 +4,6 @@ class CreateClients < ActiveRecord::Migration
       t.string :name
       t.string :email, null: false
       t.text :description
-      /t.string :image/
 
       t.timestamps null: false
     end

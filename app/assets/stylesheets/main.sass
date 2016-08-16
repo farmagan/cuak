@@ -1226,10 +1226,10 @@ body
 body
   -ms-overflow-style: scrollbar
   background-color: #935d8c
-  background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%)
-  background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #e37682 15%, #5f4d93 85%)
-  background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #e37682 15%, #5f4d93 85%)
-  background-image: url("images/overlay.png"), linear-gradient(45deg, #e37682 15%, #5f4d93 85%)
+  background-image: url("images/overlay.png"), -moz-linear-gradient(45deg, #8e9eab 15%, #eef2f3 85%)
+  background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, #8e9eab 15%, #eef2f3 85%)
+  background-image: url("images/overlay.png"), -ms-linear-gradient(45deg, #8e9eab 15%, #eef2f3 85%)
+  background-image: url("images/overlay.png"), linear-gradient(45deg, #8e9eab 15%, #eef2f3 85%)
 
   &.is-loading *
     -moz-animation: none !important
@@ -1251,7 +1251,7 @@ body
       -ms-transition: none !important
       transition: none !important
 
-  background-color: #935d8c
+  background-color: #eef2f3
   color: rgba(255, 255, 255, 0.65)
   font-family: "Source Sans Pro", Helvetica, sans-serif
   font-size: 17pt
@@ -1483,6 +1483,7 @@ button, .button
   text-align: center
   text-decoration: none
   white-space: nowrap
+  top: 1em
 
 input
   &[type="submit"].icon, &[type="reset"].icon, &[type="button"].icon
@@ -2129,6 +2130,9 @@ header.major
     font-size: 2em
     display: inline-block
 
+  .dash
+    padding-top: 1.5em
+
     &:after
       display: block
       content: ''
@@ -2143,12 +2147,8 @@ section.special header.major h2:after, article.special header.major h2:after
 
 header.major
   p
-    font-size: 1.25em
+    /*font-size: 1.25em*/
     letter-spacing: -0.025em
-
-  #clientlink
-    margin-top: 1em
-  
 
   &.special
     text-align: center
@@ -2424,7 +2424,7 @@ table
     img
       display: block
       border-radius: 100%
-      width: 16em
+      width: 14em
 
     border-color: rgba(255, 255, 255, 0.35)
 
@@ -2476,7 +2476,7 @@ table
     letter-spacing: -0.025em
 
   &.alt
-    padding: 7em 5em 4em 5em
+    padding: 5em 5em 4em 5em
 
     h1
       font-size: 3.25em
@@ -2559,10 +2559,10 @@ body.is-loading #header.alt
     opacity: 0
 
   .logo
-    -moz-transform: scale(0.8) rotate(-30deg)
-    -webkit-transform: scale(0.8) rotate(-30deg)
-    -ms-transform: scale(0.8) rotate(-30deg)
-    transform: scale(0.8) rotate(-30deg)
+    -moz-transform: scale(0.8) /* rotate(-30deg) */
+    -webkit-transform: scale(0.8)/* rotate(-30deg) */
+    -ms-transform: scale(0.8) /*rotate(-30deg)*/
+    transform: scale(0.8) /*rotate(-30deg)*/
 
 /* Nav  */
 
@@ -2812,10 +2812,10 @@ body.is-loading #header.alt
 
   header.major h2:after
     background-color: #dddddd
-    background-image: -moz-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0)
-    background-image: -webkit-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0)
-    background-image: -ms-linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0)
-    background-image: linear-gradient(90deg, #efa8b0, #a89cc8, #8cc9f0)
+    background-image: -moz-linear-gradient(90deg, #FF5F6D, #FFC371, #8cc9f0)
+    background-image: -webkit-linear-gradient(90deg, #FF5F6D, #FFC371, #8cc9f0)
+    background-image: -ms-linear-gradient(90deg, #FF5F6D, #FFC371, #8cc9f0)
+    background-image: linear-gradient(90deg, #FF5F6D, #FFC371, #8cc9f0)
 
   table
     tbody tr
@@ -2840,7 +2840,7 @@ body.is-loading #header.alt
     border-color: #dddddd
 
   > .main
-    padding: 5em 5em 3em 5em
+    padding: 2em 5em 3em 5em
     border-top: solid 1px #dddddd
 
     &:first-child

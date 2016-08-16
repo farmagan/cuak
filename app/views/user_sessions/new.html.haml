@@ -1,0 +1,46 @@
+%body
+  #wrapper
+    / Main
+    #main
+      / Introduction
+      %section#intro.main
+        .spotlight
+          .content
+            %header.major
+              %h2.dash= "Log in"
+              %br
+              = render 'form'
+                
+  / Footer
+  #wrapper
+    %footer#footer
+      %section
+        %h2 About Us
+        %p Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.
+      %section
+        %h2 Meet Us
+        %dl.alt
+          %dt Address
+          %dd Kortum Straße • 44787, Bochum • GER
+          %dt Phone
+          %dd (000) 000-0000 x 0000
+          %dt Email
+          %dd
+            %a{:href => "#"} support@cuak.com
+        %ul.icons
+          %li
+            %a.icon.fa-twitter.alt{:href => "#"}
+              %span.label Twitter
+          %li
+            %a.icon.fa-facebook.alt{:href => "#"}
+              %span.label Facebook
+          %li
+            %a.icon.fa-instagram.alt{:href => "#"}
+              %span.label Instagram
+          %li
+            %a.icon.fa-github.alt{:href => "#"}
+              %span.label GitHub
+          %li
+            %a.icon.fa-dribbble.alt{:href => "#"}
+              %span.label Dribbble
+      %p.copyright © Made with love in Bochum and Hannover.

@@ -6,23 +6,25 @@
         .spotlight
           .content
             %header.major
-              %h2 Welcome to the Client dashboard
-              %p Here you are able to manage (view, add, update, delete) your current clients. Maybe the work of a client is done and paid and you want to delete the entry, or you want to add a new good-paying client.
+              %h2.dash Client Dashboard
+              %p Welcome to the client dashboard! Here you are able to manage (view, add, update, delete) your current clients. Maybe the work of a client is done and paid and you want to delete the entry, or you want to add a new good-paying client.
               %br
-              %p= link_to "Add a new client", new_client_path
+              %span= link_to "Add a new client", new_client_path, class: "button"
 
-      -@clients.each do |client|
+      - @clients.each do |client|
         %section#intro.main
           .spotlight
             .content
               %header.major
-                %h2= "Client: #{client.name}"
-                %a.icon.fa-gear.alt{:href => "#{edit_client_path(client)}"}                  
-                %p= "Email: #{client.email}"
+                %h2= "#{client.name}"
+                = link_to "", edit_client_path(client), class: "icon fa-gear alt"
+                = link_to "", client, method: :delete, data: {confirm: "Really finished the client work?"}, class: "icon fa-trash alt"
+                %p= "E-Mail: #{client.email}"
                 %br
                 %p= client.description
-                %p#clientlink= link_to "To the chat", client_path(client)
-            %span.image= image_tag "pic01.jpg"
+                %span= link_to "To the chat", client_path(client), class: "button"
+
+            %span.image= image_tag "#{client.avatar.url}"
   / Footer
   #wrapper
     %footer#footer
@@ -35,7 +37,7 @@
           %dt Address
           %dd Kortum Straße • 44787, Bochum • GER
           %dt Phone
-          %dd (000) 000-0000 x 0000
+          %dd (0511) 6077 8055 1337
           %dt Email
           %dd
             %a{:href => "#"} support@cuak.com

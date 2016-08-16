@@ -6,16 +6,15 @@
       .spotlight
         .content
           %header.major
-            %h2 Clients like to chat.
+            %h2.dash Clients like to chat.
           %p You probably already met atleast one client who wrote an usual simple message spread out into multiple emails. First the description of their projects, then images, then .pdf's. Managing this mess is not your work, you got something better to do, thus we invented cuak™.
-          %ul.actions
-            %li
-              %a.button{:href => "generic.html"} Register now!
+          = link_to "Register now!", new_user_path, class: "button"
         %span.image= image_tag "pic01.jpg"
+
     / First Section
     %section#first.main.special
       %header.major
-        %h2 Magna veroeros
+        %h2 The basics
       %ul.features
         %li
           %span.icon.major.style1.fa-code
@@ -36,7 +35,7 @@
     / Second Section
     %section#second.main.special
       %header.major
-        %h2 Ipsum consequat
+        %h2 Numbers don't lie
         %p
           Donec imperdiet consequat consequat. Suspendisse feugiat congue
           %br/
@@ -45,15 +44,15 @@
         %li.style1
           %span.icon.fa-code-fork
           %strong 5,120
-          Etiam
+          Users
         %li.style2
           %span.icon.fa-folder-open-o
           %strong 8,192
-          Magna
+          Hours saved
         %li.style3
           %span.icon.fa-signal
-          %strong 2,048
-          Tempus
+          %strong 12,048
+          Messages sent
         %li.style4
           %span.icon.fa-laptop
           %strong 4,096

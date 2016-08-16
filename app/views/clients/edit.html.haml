@@ -7,10 +7,9 @@
         .spotlight
           .content
             %header.major
-              %h2= "Current client: #{@client.name} - #{@client.email}"
+              %h2.dash= "Current client:"
               %br                
-
-              =form_for @client, method: 'patch' do |f|
+              =form_for @client do |f|
                 /= render(partial: 'form_body')
                 =f.text_field :name, placeholder: "Enter client name please!"
                 =f.email_field :email, placeholder: "Enter client email please!"
@@ -18,7 +17,8 @@
                 =button_tag 'Update' , class: 'search-button' , type: :submit
                 /= flash[:notice]
                 
-          %span.image= image_tag "pic01.jpg"
+          %span.image= image_tag "#{@client.avatar.url}"
+
     / Footer
     #wrapper
       %footer#footer

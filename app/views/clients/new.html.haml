@@ -7,14 +7,16 @@
         .spotlight
           .content
             %header.major
-              %h2= "Create a new client:"
+              %h2.dash= "Create a new client"
               %br
               =form_for @client do |f|
                 =f.text_field :name, placeholder: "Enter client name please!"
                 =f.email_field :email, placeholder: "Enter client email please!"
                 =f.text_area :description, placeholder: "Enter project description please!"
+                = f.label :avatar
+                = f.file_field :avatar
                 =button_tag 'Create' , class: 'search-button' , type: :submit
-          %span.image= image_tag "pic01.jpg"
+                
   / Footer
   #wrapper
     %footer#footer

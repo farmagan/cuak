@@ -7,25 +7,24 @@
         .spotlight
           .content
             %header.major
-              %p= "Your client: #{@client.name}"
-              %p= "Email: #{@client.email}"
-              %br
-              %p= link_to "Client bearbeiten", edit_client_path(@client)
-          %span.image= image_tag "pic01.jpg"
+              %a.icon.fa-gear.alt{:href => "#{edit_client_path(@client)}"}
+              %span= link_to "", @client, method: :delete, data: {confirm: "Really finished the client work?"}, class: "icon fa-trash alt"
+          %span.image= image_tag "#{@client.avatar.url}"
+
     / Footer
     #wrapper
       %footer#footer
         %section
           %h2 Project Description
-          %p Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.
+          %p= @client.description
         %section
           %h2 Client Description
           %dl.alt
             %dt Name
-            %dd Tesla Motors • Elon Musk • ENG
+            %dd= @client.name
             %dt Budget
             %dd 25.000€
             %dt Email
             %dd
-              %a{:href => "#"} information@untitled.tld
+              %a{:href => "#{@client.email}"} #{@client.email}
         %p.copyright © Made with love in Bochum and Hannover.
