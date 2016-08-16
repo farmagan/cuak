@@ -2,11 +2,21 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title cuak™- Communicate with clients
+    %title cuak™ - Communicate with clients
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = stylesheet_link_tag    'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+
+    / Scripts
+    %script{:src => "assets/jquery.min.js"}
+    %script{:src => "assets/jquery.scrollex.min.js"}
+    %script{:src => "assets/jquery.scrolly.min.js"}
+    %script{:src => "assets/skel.min.js"}
+    %script{:src => "assets/util.js"}
+    /[if lte IE 8] <script src="assets/js/ie/respond.min.js"></script>
+    %script{:src => "assets/main.js"}
+    
   %body
     = render "layouts/header"
     = yield

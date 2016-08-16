@@ -1,0 +1,38 @@
+%body
+  #wrapper
+    / Main
+    #main
+      / Introduction
+      %section#intro.main
+        .spotlight
+          .content
+            %header.major
+              %h2= "Current client: #{@client.name} - #{@client.email}"
+              %br                
+
+              =form_for @client, method: 'patch' do |f|
+                /= render(partial: 'form_body')
+                =f.text_field :name, placeholder: "Enter client name please!"
+                =f.email_field :email, placeholder: "Enter client email please!"
+                =f.text_area :description, placeholder: "Enter client description please!"
+                =button_tag 'Update' , class: 'search-button' , type: :submit
+                /= flash[:notice]
+                
+          %span.image= image_tag "pic01.jpg"
+    / Footer
+    #wrapper
+      %footer#footer
+        %section
+          %h2 Project Description
+          %p= @client.description
+        %section
+          %h2 Client Description
+          %dl.alt
+            %dt Name
+            %dd= @client.name
+            %dt Budget
+            %dd 25.000€
+            %dt Email
+            %dd
+              %a{:href => "#{@client.email}"} #{@client.email}
+        %p.copyright © Made with love in Bochum and Hannover.
